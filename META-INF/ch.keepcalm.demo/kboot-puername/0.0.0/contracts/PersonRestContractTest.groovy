@@ -5,11 +5,14 @@ Contract.make {
         method 'GET'
         url '/api/persons'
         headers {
-            header(accept(), $(consumer(regex("application/(hal\\+)?json")), producer("application/hal+json")))
+            contentType(applicationJson())
         }
     }
     response {
         status OK()
+        headers{
+            contentType(applicationJson())
+        }
         body '''\
 		[
           {
