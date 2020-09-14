@@ -1,5 +1,5 @@
 
-
+# Start
 ``` 
 docker run --rm \
 -e "STUBRUNNER_IDS=ch.keepcalm.demo:kboot-puername:+:stubs:9876" \
@@ -9,4 +9,9 @@ docker run --rm \
 -p "8083:8083" \
 -p "9876:9876" \
   springcloud/spring-cloud-contract-stub-runner:2.2.4.RELEASE
+```
+
+# Call API
+``` 
+http :9876/api/persons  "Content-Type: application/json"
 ```
