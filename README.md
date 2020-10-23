@@ -15,3 +15,16 @@ docker run --rm \
 ``` 
 http :9876/api/persons  "Content-Type: application/json"
 ```
+
+# Deploy Contracts to Minikube as Servcie
+```
+skaffold run
+```
+
+# Test Contracts inside K8s
+```
+kubectl run -i --rm --restart=Never curl-client --image=tutum/curl:alpine --command -- curl -s 'http://contracts/api/persons' -H 'Content-Type: application/json' -w "\n"
+
+[{"firstName":"John"}]
+pod "curl-client" deleted
+```
