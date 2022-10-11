@@ -1,7 +1,7 @@
 apiVersion: skaffold/v2beta8
 kind: Config
 metadata:
-  name: spf-contracts
+  name: contracts
 build: {}
 deploy:
   kubectl:

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: contracts
-          image: springcloud/spring-cloud-contract-stub-runner:2.2.4.RELEASE
+          image: springcloud/spring-cloud-contract-stub-runner:3.1.4
           env:
             - name: STUBRUNNER_IDS
               value: "ch.keepcalm.demo:kboot-puername:+:stubs:9999"
