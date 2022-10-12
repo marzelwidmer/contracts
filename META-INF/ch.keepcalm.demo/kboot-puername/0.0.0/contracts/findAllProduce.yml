@@ -7,7 +7,7 @@ response:
   status: 200
   body:
     - id: 1
-      name: "Applex"
+      name: "AppleX"
       subName: "Granny Smith"
       quantity: 100
     - id: 2

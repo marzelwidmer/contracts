@@ -7,14 +7,14 @@ ROOTDIR=`(/usr/bin/cd -- "$BASEDIR" && pwd)`
 # start stub-runner server with stub maven references
 start_stub_runner() {
 	prepare_stub_runner
-    java -Dlogging.level.org.springframework=debug\
+    java -Dlogging.level.org.springframework=info\
         -jar ${BASEDIR}/stub-runner.jar \
         --server.port=8087 \
-        --stubrunner.ids=ch.keepcalm.demo:kboot-puername:+:stubs:9876 \
+        --stubrunner.ids=["ch.keepcalm.demo:kboot-puername:+:stubs:9876","ch.keepcalm.demo:xml:+:stubs"] \
         --stubrunner.stubs-mode=LOCAL \
         --stubrunner.snapshot-check-skip=true \
         --stubrunner.generate-stubs=true \
-        --stubrunner.repository-root=stubs://file:"${ROOTDIR}/META-INF/ch.keepcalm.demo/kboot-puername"
+        --stubrunner.repository-root=stubs://file:${ROOTDIR}"/META-INF"
 
 }
 

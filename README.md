@@ -52,5 +52,3 @@ docker run --rm \
 -p "9876:9876" \
   springcloud/spring-cloud-contract-stub-runner:3.1.4
 ```
-
-
