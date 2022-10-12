@@ -13,8 +13,7 @@ Contract.make {
         headers{
             contentType(applicationXml())
         }
-        body '''\
-		<?xml version="1.0" encoding="UTF-8"?>
+        body '''<?xml version="1.0" encoding="UTF-8"?>
         <getOrganisationseinheitResponse>
             <organisationseinheit>
                 <kurzBezeichnung>IFB</kurzBezeichnung>
