@@ -8,7 +8,7 @@ response:
   headers:
     Content-Type: application/json
   body: '{
-    "name" : "foo"
+    "name" : "John"
   }'
   matchers:
     headers:
