@@ -4,12 +4,12 @@ BASEDIR=$(dirname "$0")
 ROOTDIR=`(/usr/bin/cd -- "$BASEDIR" && pwd)`
 
 # Spring Cloud Contract Stub Runner properties
-SC_CONTRACT_DOCKER_VERSION=3.1.4
+SC_CONTRACT_DOCKER_VERSION=4.0.4
 STUB_PORT=9876
 STUBRUNNER_IDS=ch.keepcalm.demo:kboot-puername:+:stubs:${STUB_PORT}
 STUBRUNNER_PORT=8087
-#STUBRUNNER_REPOSITORY_ROOT=stubs://file:${ROOTDIR}"/META-INF"
-STUBRUNNER_REPOSITORY_ROOT=git://https://github.com/marzelwidmer/contracts.git
+STUBRUNNER_REPOSITORY_ROOT=stubs://file:${ROOTDIR}"/META-INF"
+#STUBRUNNER_REPOSITORY_ROOT=git://https://github.com/marzelwidmer/contracts.git
 
 
 docker run --rm \

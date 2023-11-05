@@ -8,7 +8,7 @@ docker run --rm \
 -e "STUBRUNNER_GENERATE_STUBS=TRUE" \
 -p "8083:8083" \
 -p "9876:9876" \
-  springcloud/spring-cloud-contract-stub-runner:3.1.4
+  springcloud/spring-cloud-contract-stub-runner:4.0.4
 ```
 
 # Call API
@@ -36,19 +36,18 @@ pod "curl-client" deleted
 ./etc/run-stubs-from-local.sh
 ```
 
-
-
-
-
+## Run with local DIR in docker 
 --> don`t work
+
 ``` 
 docker run --rm \
--e "STUBRUNNER_IDS=ch.keepcalm.demo:kboot-puername:+:stubs:9876" \
--e "STUBRUNNER_REPOSITORY_ROOT=//file:$pwd/META-INF/ch.keepcalm.demo/kboot-puername" \
+-e "STUBRUNNER_IDS=ch.keepcalm.demo:kboot-puername:+:stubs:9876,ch.keepcalm.demo:xml:+:stubs" \
 -e "STUBRUNNER_STUBS_MODE=LOCAL" \
--e "STUBRUNNER_SNAPSHOT_CHECK_SKIP=false" \
--e "STUBRUNNER_GENERATE_STUBS=TRUE" \
--p "8083:8083" \
--p "9876:9876" \
-  springcloud/spring-cloud-contract-stub-runner:3.1.4
-```
+-e "STUBRUNNER_SNAPSHOT_CHECK_SKIP=true" \
+-e "STUBRUNNER_GENERATE_STUBS=true" \
+-e "STUBRUNNER_REPOSITORY_ROOT=stubs://file://$PWD/META-INF" \
+-e "logging.level.org.springframework=DEBUG" \
+-p 8087:8087 \
+springcloud/spring-cloud-contract-stub-runner:4.0.4
+
+``` 

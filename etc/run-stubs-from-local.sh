@@ -22,7 +22,7 @@ start_stub_runner() {
 prepare_stub_runner() {
     if [ ! -r "${BASEDIR}/stub-runner.jar" ]; then
         wget -O ${BASEDIR}/stub-runner.jar \
-        'https://repo.spring.io/release/org/springframework/cloud/spring-cloud-contract-stub-runner-boot/3.1.4/spring-cloud-contract-stub-runner-boot-3.1.4.jar'
+        'https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-contract-stub-runner-boot/4.0.4/spring-cloud-contract-stub-runner-boot-4.0.4.jar'
     fi
 }
 
