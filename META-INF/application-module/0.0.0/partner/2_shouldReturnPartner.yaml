@@ -1,5 +1,5 @@
 description: |
-  Should return info about other endpoints to query
+  Should return info about other endpoints to query, 2_shouldReturnPartner
 request:
   method: GET
   url: /partners

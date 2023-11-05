@@ -1,5 +1,5 @@
 description: |
-  Should add a partner
+  Should add a partner, 1_shouldAddAPartner
 request:
   method: POST
   url: /partners

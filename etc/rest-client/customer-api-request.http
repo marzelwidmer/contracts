@@ -1,0 +1,7 @@
+### All Customers
+GET http://localhost:8081/customers
+Content-Type: application/json
+
+### A specific customer
+GET http://localhost:8081/customers/1
+Content-Type: application/json

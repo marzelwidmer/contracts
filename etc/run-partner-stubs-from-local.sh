@@ -10,7 +10,7 @@ start_stub_runner() {
     java -Dlogging.level.org.springframework=info\
         -jar ${BASEDIR}/stub-runner.jar \
         --server.port=8087 \
-        --stubrunner.ids=["ch.keepcalm:application-module:+:stubs:8081", "ch.keepcalm.demo:kboot-puername:+:stubs", "ch.keepcalm.demo:xml:+:stubs"] \
+        --stubrunner.ids="ch.keepcalm:application-module:+:stubs:8081" \
         --stubrunner.stubs-mode=LOCAL \
         --stubrunner.snapshot-check-skip=true \
         --stubrunner.generate-stubs=true \

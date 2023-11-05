@@ -1,0 +1,2 @@
+### Admin Mappings
+GET http://localhost:8081/__admin/mappings
