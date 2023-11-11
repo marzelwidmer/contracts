@@ -4,7 +4,7 @@ Contract.make {
     name "Posts "
     request {
         method "GET"
-        urlPath "/posts"
+        urlPath "/customers"
     }
     response {
         status OK()
