@@ -2,6 +2,8 @@
   request:
     method: GET
     url: /customers
+    headers:
+      Content-Type: application/json
   response:
     status: 200
     body:

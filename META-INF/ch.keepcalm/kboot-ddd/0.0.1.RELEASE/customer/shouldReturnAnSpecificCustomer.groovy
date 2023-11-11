@@ -2,6 +2,9 @@ org.springframework.cloud.contract.spec.Contract.make {
   request {
     method 'GET'
     urlPath $(server("/customers/1"), client(regex("/customers/[0-9a-zA-Z]+")))
+    headers {
+      contentType(applicationJson())
+    }
   }
   response {
     status 200
